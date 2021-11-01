@@ -1,0 +1,17 @@
+@import '../global.less';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: @inner-min-width;
+  max-width: @inner-max-width;
+  height: 100vh;
+  margin: 0 auto;
+  font-size: 13px;
+  background: @light-bg;
+
+  .inner {
+    padding: 50px 0 150px;
+  }
+}

@@ -1,0 +1,102 @@
+@import '~antd/lib/style/themes/default.less';
+@import '../../global.less';
+
+@header-height: 80px;
+@menu-title-color: @light-font-color;
+@menu-title-active-color: #fff;
+@menu-font-size: 16px;
+
+.header {
+  height: @header-height;
+  background: @dark-bg;
+
+  .headerInner {
+    max-width: @inner-max-width;
+    margin: 0 auto;
+    color: @menu-title-color;
+
+    .headerBrand {
+      display: flex;
+      align-items: center;
+      height: @header-height;
+      color: @menu-title-color;
+      font-size: 18px;
+
+      img {
+        width: 48px;
+        margin-right: 16px;
+      }
+
+      &:hover {
+        color: @menu-title-active-color;
+      }
+    }
+
+    .headerRight {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 80px;
+    }
+  }
+
+  .headerMenu {
+    :global {
+      .ant-menu {
+        color: @menu-title-color;
+        font-size: @menu-font-size;
+        background: transparent;
+      }
+
+      .ant-menu-horizontal {
+        border-bottom: none;
+
+        > .ant-menu-item,
+        > .ant-menu-submenu {
+          color: @menu-title-color;
+          border-radius: 6px;
+          transition: background 0.2s;
+
+          .ant-menu-submenu-title:hover {
+            color: @menu-title-active-color;
+          }
+
+          &::after {
+            border-bottom: none;
+            transition: none;
+          }
+
+          &:hover,
+          &-active,
+          &-open,
+          &-selected {
+            color: @menu-title-active-color;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.1);
+            border-bottom: none;
+
+            &::after {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.headerPopup {
+  ul {
+    background: rgba(0, 0, 0, 0.5) !important;
+  }
+
+  :global {
+    .ant-menu-title-content {
+      color: @menu-title-color;
+    }
+
+    .ant-menu-item-active > .ant-menu-title-content {
+      color: @menu-title-active-color;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import '../../../global.less';
+
+.galleryContainer {
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 80px;
+
+  .image {
+    width: auto;
+    max-height: 640px;
+  }
+
+  .video {
+    width: auto;
+    max-height: 420px;
+  }
+
+  :global {
+    .slick-thumb {
+      bottom: -80px;
+
+      li {
+        width: 64px;
+        height: 48px;
+        padding: 2px;
+        text-indent: 0 !important;
+        border: 2px solid transparent;
+
+        img {
+          max-height: 48px;
+        }
+      }
+      .slick-active {
+        width: 64px !important;
+        height: 48px !important;
+        border: 2px solid @primary-font-color;
+      }
+    }
+  }
+}

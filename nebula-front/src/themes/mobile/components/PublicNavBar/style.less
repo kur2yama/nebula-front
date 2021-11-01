@@ -1,0 +1,31 @@
+@import '../../global.less';
+
+.container {
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: @inner-min-width;
+  max-width: @inner-max-width;
+  height: 50px;
+  font-size: 16px;
+  background: #fff;
+
+  .leftContainer {
+    min-width: 80px;
+    margin-left: 13px;
+    text-align: left;
+  }
+
+  .centerContainer {
+    flex: 1;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .rightContainer {
+    min-width: 80px;
+    margin-right: 16px;
+    text-align: right;
+  }
+}

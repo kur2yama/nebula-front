@@ -1,0 +1,61 @@
+@import '../../global.less';
+
+.footer {
+  color: @light-font-color;
+  font-size: @font-size;
+  text-align: center;
+  background: @dark-bg;
+
+  a {
+    color: @light-font-color;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .footerInner {
+    max-width: @inner-max-width;
+    margin: 0 auto;
+    padding: 32px 0;
+
+    .footerTitle {
+      padding: 16px 0;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .footerItem {
+      display: flex;
+      justify-content: center;
+      padding: 6px 0;
+
+      .footerItemLeft {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-right: 16px;
+
+        .footerItemIcon {
+          color: #3eaafd;
+          font-size: 24px;
+        }
+      }
+
+      .footerItemRight {
+        width: 120px;
+      }
+    }
+  }
+
+  .footerBottom {
+    padding: 16px 0;
+    background: @more-dark-bg;
+
+    .bottomInner {
+      max-width: 90%;
+      margin: 0 auto;
+      font-size: 12px;
+    }
+  }
+}

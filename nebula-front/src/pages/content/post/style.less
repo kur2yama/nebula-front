@@ -1,0 +1,31 @@
+@import '~antd/es/style/themes/default.less';
+
+.container {
+  .listContainer {
+    height: calc(~'100vh - 332px');
+    overflow: auto;
+
+    .list {
+      margin-top: 16px;
+
+      .listItem {
+        padding: 8px 16px;
+        cursor: pointer;
+      }
+
+      .listItem:hover {
+        background: @cyan-1;
+      }
+
+      .listItemSelected,
+      .listItemSelected:hover {
+        background: @cyan-2;
+      }
+    }
+  }
+
+  .rightContainer {
+    height: calc(~'100vh - 300px');
+    overflow: auto;
+  }
+}
